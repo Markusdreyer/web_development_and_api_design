@@ -1,9 +1,9 @@
-import {computeMax, computeMin, computeMean, computeSum} from "./my-math";
+import { computeMax, computeMin, computeMean, computeSum } from "./my-math";
 
 
 export function validateInput(input) {
 
-    if (typeof(input) !== 'string') {
+    if (typeof (input) !== 'string') {
         return false;
     }
 
@@ -25,9 +25,9 @@ export function updatePage() {
     let mean = no_array;
     let sum = no_array;
 
-    if (! isBlank) {
+    if (!isBlank) {
 
-        if(! validateInput(inputValue)){
+        if (!validateInput(inputValue)) {
 
             const invalid_array = "Error. The input array is invalid. Should just contain numbers separated by ',' commas."
 
@@ -37,7 +37,6 @@ export function updatePage() {
             sum = invalid_array;
 
         } else {
-
             const array = inputValue.split(',').map(Number);
 
             min = computeMin(array);
@@ -52,7 +51,7 @@ export function updatePage() {
     document.getElementById("meanId").innerHTML = mean;
     document.getElementById("sumId").innerHTML = sum;
 
-    if(inputField.oninput === null){
+    if (inputField.oninput === null) {
         inputField.oninput = updatePage;
     }
 }
