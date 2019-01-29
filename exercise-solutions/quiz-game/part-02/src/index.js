@@ -1,22 +1,22 @@
-import {getRandomQuizzes} from './quizzes';
+import { getRandomQuizzes } from './quizzes';
 
 
 function answerTag(prefix, answer, correct) {
 
     let onclick;
 
-    if(correct) {
+    if (correct) {
         onclick = "alert('Correct!!!');  EntryPoint.displayNewQuiz();";
     } else {
         onclick = "alert('Wrong answer');";
     }
 
-    const html = "<div class='gameBtn' onclick=\""+onclick+"\">" + prefix + answer + "</div>";
+    const html = "<div class='gameBtn' onclick=\"" + onclick + "\">" + prefix + answer + "</div>";
 
     return html;
 }
 
-function displayQuiz (quiz) {
+function displayQuiz(quiz) {
 
     let html = "<p class='question'>Question: \"" + quiz.question + "\"</p>";
     html += answerTag("A: ", quiz.answers[0], quiz.indexOfRightAnswer === 0);
@@ -29,7 +29,7 @@ function displayQuiz (quiz) {
     quizDiv.innerHTML = html;
 }
 
-export function displayNewQuiz(){
+export function displayNewQuiz() {
 
     const quiz = getRandomQuizzes(1)[0];
 

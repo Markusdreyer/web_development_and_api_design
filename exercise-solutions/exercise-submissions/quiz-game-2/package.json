@@ -1,5 +1,5 @@
 {
-  "name": "part-02",
+  "name": "quiz-game-2",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {},
@@ -16,7 +16,7 @@
     "babel-preset-env": "^1.7.0",
     "jest": "^23.4.1",
     "webpack": "^4.16.2",
-    "webpack-cli": "^3.1.0",
+    "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.5"
   },
   "jest": {

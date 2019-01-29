@@ -52,13 +52,13 @@ const quizzes = [
 ];
 
 
-export function getRandomQuizzes(numberOfQuizzes){
+export function getRandomQuizzes(numberOfQuizzes) {
 
-    if(numberOfQuizzes < 1){
+    if (numberOfQuizzes < 1) {
         throw "Invalid number of requested quizzes: " + n;
     }
 
-    if(numberOfQuizzes > quizzes.length){
+    if (numberOfQuizzes > quizzes.length) {
         throw "Too many quizzes";
     }
 
